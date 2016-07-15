@@ -1,0 +1,88 @@
+/* -------------------------------------------------------------------------- */
+/* Css: v3.2 - Z-Endless-Dreams - 14/07/2016 --_-Jose Andre Fernandes Sabino--*/
+/* -------------------------------------------------------------------------- */
+.sm-headerUpdate{
+    margin-top: -200px;
+    opacity: 0;
+}
+.sm-max-w100{max-width: 100%!important;}
+.sm-w100{width: 100%!important;}
+.sm-w50{width: 50%!important;}
+.sm-w33{width: 33%!important;}
+
+.sm-max-hgt{max-height: 1000px; opacity: 1!important;}
+
+.sm-mgn0{margin: 0!important;}
+
+.sm-dInlineB{display: inline-block!important;}
+.sm-displayOff{display: none!important;}
+.sm-displayOn{display: block!important;}
+.sm-pRelative{position: relative!important;}
+
+.sm-tCenter{text-align: center!important;}
+
+.sm-floatOff{float: none!important;}
+
+.sm-pdg0{padding: 0px!important;}
+.sm-pdg5{padding: 5px!important;}
+.sm-pdg60L{padding-left: 60px!important;}
+
+section{min-height: calc(100% - 200px)!important;}
+
+h1{font-size: 2.6rem!important;}
+h2{font-size: 2.2rem!important;}
+h3{font-size: 1.8rem!important;}
+
+.hvrTxtB{
+    width: 120px;
+    opacity: 1;
+    margin-left: -60px;
+    word-break: break-all;
+}
+.rsMinW .rsArrowRight{right:0!important;}
+.rsMinW .rsArrowLeft{left:0!important;}
+
+/* -------------------------------------------------------------------------- */
+/* Alteração exótica */
+.w33 .softLineV{
+    width: 100%;
+    min-height: 2px;
+    left: 0!important;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Tabela */
+.tb-head{font-size: 1.2rem!important;}
+.tb-view .tb-line{padding: 0; display: inline-block;}
+.tb-line-img{
+    padding: 0 60px 0 100px!important;
+    min-height: 80px;
+}
+.tb-view .tb-img{width: 95px!important;}
+.tb-view .tb-link{
+    position: relative;
+    width: 33.333%!important;
+    right: 0!important;
+}
+/* -------------------------------------------------------------------------- */
+@media all and (max-width: 640px){
+.default .title{padding: 15px 0 8px 0;}
+.default img.simpleImg{
+    float: none;
+    display: inline-block;
+    margin: 0 0 15px 0;
+}
+.inputField{width: 100%;}
+.iptBtn{width: 100%; height: auto!important; padding: 10px 0; font-size: 1.6rem!important;}
+}
+@media all and (max-width: 480px){
+/* X Small */
+.xsm-dInlineB{display: inline-block!important;}
+
+.xsm-w100{width: 100%!important;}
+.xsm-w90{width: 90%!important;}
+
+
+/* Ajuste - Home */
+#especialidades .contBox .contLimit{max-width: 380px!important;}
+}
