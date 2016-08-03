@@ -1,5 +1,5 @@
 /* -------------------------------------------------------------------------- */
-/* Css: v3.2 - Z-Endless-Dreams - 14/07/2016 --_-Jose Andre Fernandes Sabino--*/
+/* Css: v3.3 - Z-Endless-Dreams - 28/07/2016 --_-https://github.com/Joseafs---*/
 /* -------------------------------------------------------------------------- */
 /* Reset(0) */
 *, ::after, ::before {margin: 0; padding: 0; list-style: none; border: none; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
@@ -8,7 +8,8 @@ html{
     font-size: 62.5%!important; /* a '%' define valor 'rem' igual a 'px' */
     height: 100%;
     width: 100%;
-    overflow: hidden;
+    
+    overflow: auto;
 } 
 body{
     color: #666;
@@ -31,7 +32,6 @@ input, textarea, select, button{outline-color: rgba(0,0,0, .3);}
 
 /* -------------------------------------------------------------------------- */
 /* Overflow */
-
 ::-webkit-scrollbar {
     width: 7px;
 }
@@ -44,19 +44,19 @@ input, textarea, select, button{outline-color: rgba(0,0,0, .3);}
 }
 ::-webkit-scrollbar-thumb:window-inactive{
     background-color: rgba(0, 0, 0, .1);
-
 }
 /* -------------------------------------------------------------------------- */
 /* Padrao - recomendado para campos editaveis */
 .default{word-break: break-all;}
 .default p{margin: 3px;padding: 3px;}
-.default iframe, img, video{max-width: 100%;}
+.default iframe, .default img, .default video, .default table{max-width: 100%!important;}
+.default table{width: auto!important;}
+.default img{height: auto!important;}
 .default li{
     list-style: outside disc; 
     margin: 5px 20px; 
     padding: 5px; 
 }
-.default img.simpleImg{max-width: 100%;}
 .default a.beautLink{
     position: relative;
     padding: 8px 15px;
@@ -68,7 +68,7 @@ input, textarea, select, button{outline-color: rgba(0,0,0, .3);}
 .imgOn{
     height: 100%;
     width: 100%;
-    background-size: 100% 100%;
+    background-size: auto 100%;
     background-position: center center;
     background-repeat: no-repeat;
     float: left;
@@ -81,7 +81,6 @@ input, textarea, select, button{outline-color: rgba(0,0,0, .3);}
     float: left;
     opacity: .4;
 }
-.simpleImg{width:100%; float: left;}
 /* -------------------------------------------------------------------------- */
 /* Principais */
 section{
@@ -101,17 +100,15 @@ section{
 }
 /* -------------------------------------------------------------------------- */
 /* Utilitarios */
-h1.title{
+.title{
     width: 100%;
-    float: left;
+}
+h1.title{
     font-size: 3.2rem;
     padding: 18px 10px;
 }
 h2.title{
-    width: 100%;
-    float: left;
     font-size: 2.8rem;
-    font-weight: 400;
     padding: 4px;
 }
 h3.title{
@@ -130,8 +127,6 @@ h3.title{
     top: 0;
     left: 0;
 }
-/* -------------------------------------------------------------------------- */
-/* -----------------------------ESTILOS__PRONTOS----------------------------- */
 /* -------------------------------------------------------------------------- */
 /* Formulario */
 .inputField{
@@ -273,6 +268,29 @@ h3.title{
     box-shadow: inset 0px 0px 1px 1px #1192D4;
 }
 /* -------------------------------------------------------------------------- */
+/* FontIcon */
+[class*="fIcon"]:before{float: left;}
+[class*="fIcon"]{
+    font-family: 'material-icons' ;
+    position: relative;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.8rem; 
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+/* -------------------------------------------------------------------------- */
 /* Tamanho de texto */
 .fSize62{font-size: 6.2rem;}
 .fSize52{font-size: 5.2rem;}
@@ -288,10 +306,6 @@ h3.title{
 .fSize12{font-size: 1.2rem;}
 .fSize10{font-size: 1rem;}
 .fSize8{font-size: .8rem;}
-
-.tUppercase{text-transform: uppercase;}
-.tLowercase{text-transform: lowercase;}
-
 /* -------------------------------------------------------------------------- */
 /* Intensidade/tipo de Fonte */
 .fUBold{font-weight:900;}
@@ -303,6 +317,8 @@ h3.title{
 .fLight{font-weight: 300;}
 .fThin{font-weight: 100;}
 .fItalic{font-style:italic;}
+.tUppercase{text-transform: uppercase;}
+.tLowercase{text-transform: lowercase;}
 /* -------------------------------------------------------------------------- */
 /* Text Shadows */ 
 .tShadow1{text-shadow:.04rem .04rem .06rem #F58220;}
@@ -325,60 +341,64 @@ h3.title{
 .column2 li{width:100%; float: left; padding: 2px;}
 /* -------------------------------------------------------------------------- */
 /* Dimensoes */
-.w0{width: 0%!important;} 
-.w10{width: 10%;} 
-.w15{width: 15%;} 
-.w20{width: 20%;} 
-.w25{width: 25%;} 
-.w30{width: 30%!important;} 
-.w33{width: 33.333333%;} 
-.w40{width: 40%;} 
-.w45{width: 45%;} 
-.w50{width: 50%!important;} 
-.w55{width: 55%!important;} 
-.w60{width: 60%;} 
-.w66{width: 66.666666%;} 
-.w70{width: 70%;} 
-.w75{width: 75%;} 
-.w80{width: 80%;} 
-.w90{width: 90%;} 
-.w99{width: 99%;} 
-.w100{width: 100%!important;}
-.allW100 *{width: 100%;}
-.min-w100{min-width: 100%!important;}
-.max-w30p{max-width: 30px;}
-.max-w70p{max-width: 70px;}
-.max-w90p{max-width: 90px!important;}
-.max-w120p{max-width: 120px;}
-.max-w160p{max-width: 160px;}
-.max-w170p{max-width: 170px;}
-.max-w220p{max-width: 220px!important;}
-.max-w100{max-width: 100%;}
+.wd-0{width: 0%;} 
+.wd-10{width: 10%;} 
+.wd-15{width: 15%;} 
+.wd-20{width: 20%;} 
+.wd-25{width: 25%;} 
+.wd-30{width: 30%;} 
+.wd-33{width: 33.333333%;} 
+.wd-35{width: 35%;} 
+.wd-40{width: 40%;} 
+.wd-45{width: 45%;} 
+.wd-50{width: 50%;} 
+.wd-55{width: 55%;} 
+.wd-60{width: 60%;} 
+.wd-66{width: 66.666666%;} 
+.wd-70{width: 70%;} 
+.wd-75{width: 75%;} 
+.wd-80{width: 80%;} 
+.wd-90{width: 90%;} 
+.wd-99{width: 99%;} 
+.wd-100{width: 100%;}
+.all-wd-100 *{width: 100%;}
+.min-wd-100{min-width: 100%;}
+.max-wd-30p{max-width: 30px;}
+.max-wd-70p{max-width: 70px;}
+.max-wd-90p{max-width: 90px;}
+.max-wd-120p{max-width: 120px;}
+.max-wd-160p{max-width: 160px;}
+.max-wd-170p{max-width: 170px;}
+.max-wd-220p{max-width: 220px;}
+.max-wd-100{max-width: 100%;}
 /* -------------------------------------------------------------------------- */
 /* Altura */
-.min-hgt1p{min-height: 1px;}
-.min-hgt2p{min-height: 2px;}
-.min-hgt3p{min-height: 3px!important;}
-.min-hgt20p{min-height: 20px;}
-.min-hgt40p{min-height: 40px;}
-.min-hgt50p{min-height: 50px;}
-.min-hgt60p{min-height: 60px;}
-.min-hgt80p{min-height: 80px;}
-.min-hgt100p{min-height: 100px;}
-.min-hgt200p{min-height: 200px;}
-.min-hgt250p{min-height: 250px;}
-.min-hgt300p{min-height: 300px;}
-.min-hgt350p{min-height: 350px;}
-.min-hgt400p{min-height: 400px;}
-.min-hgt500p{min-height: 500px;}
-.min-hgt10{min-height: 10%;}
-.min-hgt33{min-height: 33%;}
-.min-hgt50{min-height: 50%;}
-.min-hgt100{min-height: 100%;}
-.hgt100{height: 100%;}
-.hgtAuto{height: auto!important;}
-.allHgt100 *{height: 100%;}
-[class*="max-hgt"]{max-height: 0px; opacity: 0;}
+.min-hg-1p{min-height: 1px;}
+.min-hg-2p{min-height: 2px;}
+.min-hg-3p{min-height: 3px!important;}
+.min-hg-20p{min-height: 20px;}
+.min-hg-40p{min-height: 40px;}
+.min-hg-50p{min-height: 50px;}
+.min-hg-60p{min-height: 60px;}
+.min-hg-80p{min-height: 80px;}
+.min-hg-100p{min-height: 100px;}
+.min-hg-150p{min-height: 150px;}
+.min-hg-200p{min-height: 200px;}
+.min-hg-250p{min-height: 250px;}
+.min-hg-300p{min-height: 300px;}
+.min-hg-350p{min-height: 350px;}
+.min-hg-380p{min-height: 380px;}
+.min-hg-400p{min-height: 400px;}
+.min-hg-450p{min-height: 450px;}
+.min-hg-500p{min-height: 500px;}
+.min-hg-10{min-height: 10%;}
+.min-hg-33{min-height: 33%;}
+.min-hg-50{min-height: 50%;}
+.min-hg-100{min-height: 100%;}
+.hg-100{height: 100%;}
+.hg-Auto{height: auto!important;}
+.all-hg-100 *{height: 100%;}
+[class*="max-hg"]{max-height: 0px; opacity: 0; overflow: hidden;}
 /* -------------------------------------------------------------------------- */
 /* Z-index */
 .zInd-999{z-index: -999;}
@@ -386,14 +406,12 @@ h3.title{
 .zInd-1{z-index: -1;}
 .zInd0{z-index: 0!important;}
 .zInd1{z-index: 1!important;}
-.zInd2{z-index: 2;}
-.zInd3{z-index: 3;}
-.zInd4{z-index: 4;}
-.zInd5{z-index: 5;}
-.zInd6{z-index: 6;}
+.zInd2{z-index: 2!important;}
+.zInd3{z-index: 3!important;}
+.zInd6{z-index: 6!important;}
 .zInd9{z-index: 9!important;}
 .zInd99{z-index: 99!important;}
-.zInd999{z-index: 999;}
+.zInd999{z-index: 999!important;}
 .zIndAll{z-index: 999999999!important;}
 /* -------------------------------------------------------------------------- */
 /* Quebras/ alinhamentos */
@@ -403,8 +421,21 @@ h3.title{
     display: flex;
     align-items: center;
 }
+.dBottom{
+    display: -webkit-flex; 
+    -webkit-align-items: flex-end; 
+    display: flex;
+    align-items: flex-end;
+}
+.dTop{
+    display: -webkit-flex; 
+    -webkit-align-items: flex-top; 
+    display: flex;
+    align-items: flex-top;
+}
 .displayOn{display:block;}
 .displayOff{display:none;}
+.dFlex{display:flex;}
 .dInlineB{display:inline-block;}
 .ovflwV{overflow: visible!important;}
 .ovflwH{overflow: hidden!important; z-index: 0;}
@@ -427,6 +458,8 @@ h3.title{
 .pLeft{left: 0!important;}
 .pLeft50{left: 50%!important;}
 .clearB{clear:both;}
+
+.aBaseline{align-self: baseline;}
 /* -------------------------------------------------------------------------- */
 /* Margrem */
 .mgnAuto{margin:auto;} /* Ajuste para centralizar */
@@ -435,7 +468,6 @@ h3.title{
 .mgn0B{margin-bottom:0px;}
 .mgn0L{margin-left:0px;}
 .mgn0R{margin-right:0px;}
-/* ----------------------- */
 /* ----------------------- */
 .mgn3T{margin-top:3px;}
 .mgn3B{margin-bottom:3px;}
@@ -482,7 +514,6 @@ h3.title{
 .mgn50T{margin-top:50px;}
 .mgn50B{margin-bottom:50px;}
 .mgn50R{margin-right:50px;}
-
 /* ----------------------- */
 .mgnP1{margin:1%;}
 .mgnP1L{margin-left:1%;}
@@ -586,6 +617,7 @@ h3.title{
 /* Box Shadows */ 
 .bShwIn{box-shadow: inset 0 2px 2px 0px rgba(0,0,0,.3), inset 0 -2px 2px 0px rgba(0,0,0,.3);}
 .bShwOut-1p{box-shadow: 0 0 1px 1px rgba(0,0,0,.3);}
+.bShwOut-3p{box-shadow: 0 0 3px 3px rgba(0,0,0,.3);}
 .bShwT{box-shadow:0 -2px 2px 0px rgba(0,0,0,.3);}
 .bShwB{box-shadow: 0 2px 2px 0px rgba(0,0,0, .3);}
 /* -------------------------------------------------------------------------- */
@@ -650,13 +682,11 @@ hr.softLine{
 /* -------------------------------------------------------------------------- */
 /* Maps */
 .gmnoprint,.gmnoscreen,.gmnoprint,.gm-style-cc{display: none;}
-
 /* -------------------------------------------------------------------------- */
 /* Facebook */
 /*#fb-root {display: none;} */
 /* To fill the container and nothing else */
 .fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style], #likebox-wrapper * {width: 100% !important;}.fb-page,.fb-page span,.fb-page span iframe[style]  {width: 100%!important;}
-
 /* -------------------------------------------------------------------------- */
 /* Accordion */
 /* Section Titles */
@@ -665,13 +695,10 @@ hr.softLine{
     float: left;
     padding: 10px; 
     position: relative;
-    text-transform: uppercase;
 }
-.acd-accent .acdLink{color: #fff!important;}
 .acd .acd-sct:last-child .acd-sct-title{ border-bottom: none; }
 .acd .acd-sct:last-child .acd-sct-title.active{border-radius: 0;}
 .acd{border-radius: 3px!important;overflow: hidden;}
-
 /* Section Content */
 .acd .acdLink.active, .acd .acd-sct-title.active{
     box-shadow: 0 -2px 2px 0px rgba(0,0,0,.2);
@@ -731,19 +758,19 @@ hr.softLine{
 .close-right.active:before{ transform: rotate(45deg);}
 /* -------------------------------------------------------------------------- */
 /* Cor para fundos */
-.bgOpac-dark1{background-color: rgba(0,0,0,.1)!important;}
-.bgOpac-dark2{background-color: rgba(0,0,0,.2)!important;}
-.bgOpac-dark4{background-color: rgba(0,0,0,.4)!important;}
-.bgOpac-dark6{background-color: rgba(0,0,0,.6)!important;}
-.bgOpac-dark8{background-color: rgba(0,0,0,.8)!important;}
+.bgOpc-dark1{background-color: rgba(0,0,0,.1)!important;}
+.bgOpc-dark2{background-color: rgba(0,0,0,.2)!important;}
+.bgOpc-dark4{background-color: rgba(0,0,0,.4)!important;}
+.bgOpc-dark6{background-color: rgba(0,0,0,.6)!important;}
+.bgOpc-dark8{background-color: rgba(0,0,0,.8)!important;}
 .bgDark{background-color: #000!important;}
 
-.bgOpac-white1{background-color: rgba(255,255,255,.1)!important;}
-.bgOpac-white2{background-color: rgba(255,255,255,.2)!important;}
-.bgOpac-white4{background-color: rgba(255,255,255,.4)!important;}
-.bgOpac-white6{background-color: rgba(255,255,255,.6)!important;}
-.bgOpac-white8{background-color: rgba(255,255,255,.8)!important;}
-.bgOpac-white9{background-color: rgba(255,255,255,.9)!important;}
+.bgOpc-white1{background-color: rgba(255,255,255,.1)!important;}
+.bgOpc-white2{background-color: rgba(255,255,255,.2)!important;}
+.bgOpc-white4{background-color: rgba(255,255,255,.4)!important;}
+.bgOpc-white6{background-color: rgba(255,255,255,.6)!important;}
+.bgOpc-white8{background-color: rgba(255,255,255,.8)!important;}
+.bgOpc-white9{background-color: rgba(255,255,255,.9)!important;}
 .bgWhite{background-color: #fff!important;}
 
 .bgNone{background-color: transparent!important;}
@@ -763,18 +790,18 @@ hr.softLine{
 /* Cor de texto */
 .cNone{color: transparent!important;}
 
-.cDark1{color:rgba(0,0,0,.1)!important;}
-.cDark2{color:rgba(0,0,0,.2)!important;}
-.cDark3{color:rgba(0,0,0,.3)!important;}
-.cDark4{color:rgba(0,0,0,.4)!important;}
-.cDark6{color:rgba(0,0,0,.6)!important;}
-.cDark8{color:rgba(0,0,0,.8)!important;}
-.cDark9{color:rgba(0,0,0,.9)!important;}
-.cDark{color:rgba(0,0,0,10)!important;}
+.cOpc-Dark1{color:rgba(0,0,0,.1)!important;}
+.cOpc-Dark2{color:rgba(0,0,0,.2)!important;}
+.cOpc-Dark3{color:rgba(0,0,0,.3)!important;}
+.cOpc-Dark4{color:rgba(0,0,0,.4)!important;}
+.cOpc-Dark6{color:rgba(0,0,0,.6)!important;}
+.cOpc-Dark8{color:rgba(0,0,0,.8)!important;}
+.cOpc-Dark9{color:rgba(0,0,0,.9)!important;}
+.cOpc-Dark{color:rgba(0,0,0,10)!important;}
 
-.cGray9{color: #999;}
-.cGray6{color: #666;}
-.cGray3{color: #333;}
+.cGray9{color: #999!important;}
+.cGray6{color: #666!important;}
+.cGray3{color: #333!important;}
 
 .cGreen{color:#58AC4E!important;}
 .cWhite{color:#FFFFFF!important;}
@@ -936,11 +963,18 @@ hr.softLine{
     100%{transform: translateY(0px);}
 }
 /* -------------------------------------------------------------------------- */
+/* Efeito de fundo */
 .bgMask{
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-    z-index: 0;
+    z-index: -1;
+}
+/* -------------------------------------------------------------------------- */
+/* Combo Classes */
+.contBox>[class*='wd-']{
+    float: left;
+    padding: 5px;
 }
